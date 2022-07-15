@@ -1,0 +1,167 @@
+body {
+    background: url(/coffeeandlaptop.jpg);
+    background-size: cover;
+    margin: -8px;
+}
+
+.container {
+    max-width: 100%;
+
+    /* margin: 0 auto; */
+}
+
+#header {
+    background-color: #150c0c;
+    margin: auto;
+    max-height: 300px;
+    width: 100%;
+}
+
+nav img {
+    margin-left: 100px;
+}
+
+nav #main-menu {
+    margin-right: 250px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+
+}
+
+#logo {
+    /* padding: 0 5px; */
+}
+
+#logo img {
+    max-width: 70px;
+    display: block;
+
+
+}
+
+#main-menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#main-menu li {
+    position: relative;
+}
+
+#main-menu li a {
+    color: #f0f0f0;
+    display: block;
+    padding: 27px 25px 23px 25px;
+    text-decoration: none;
+
+}
+
+/* Điều chỉnh menu 2 */
+#main-menu ul.submenu {
+    position: absolute;
+    list-style: none;
+    background: #150c0c;
+    padding: 0 0 0 0;
+    width: 150px;
+    border: 1px solid #434343;
+    margin-top: 1px;
+    display: none;
+    left: -1px;
+
+
+}
+
+/* Điều chỉnh ánh sáng menu 2 */
+#main-menu ul.submenu a {
+    padding: 8px 15px;
+    border-bottom: 1px solid #434343;
+    left: 0px;
+}
+
+/* Khi hold vào menu mới hiện menu con */
+#main-menu li:hover>ul.submenu {
+    display: block;
+}
+
+/* Khi hold chuột vào thanh menu sẽ phát sáng */
+#main-menu ul.submenu li:hover>a {
+    border-bottom: 1px solid #a9a0a0;
+
+}
+
+/* Ẩn phát sáng thanh mennu cuối */
+#main-menu ul.submenu li:last-child li {
+    border: none;
+}
+
+#main-menu ul.submenu ul.submenu {
+    margin-top: -1px;
+}
+
+/* Điều chỉnh thanh menu 3 khớp với thanh menu 2 */
+#main-menu ul.submenu ul.submenu {
+    position: absolute;
+    left: 150px;
+    list-style: none;
+    top: 0px;
+    padding-left: 0px;
+    width: 150px;
+    background: #150c0c;
+
+}
+
+/* Thiết thanh boder dưới chân khi hover */
+
+#main-menu>li>a::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0px;
+    background: #f42828;
+    bottom: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    left: 0px;
+}
+
+#main-menu>li:hover>a::before {
+    width: 100%;
+
+}
+
+#main-menu>li.has-child::after {
+    /* content: "mũi tên"; */
+    color: #b8b1b1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 27px 0px;
+}
+
+/* khi hove vào chỗ nào sẽ chuyển màu (chỉ chữ) */
+#main-menu .submenu li:hover>a {
+    color: #cde258;
+}
+
+#main-menu .submenu>li.has-child::after {
+    color: #b8b1b1;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 9px 0px;
+}
+
+#main-menu .submenu>li.has-child:hover::after {
+    color: #cde258;
+}

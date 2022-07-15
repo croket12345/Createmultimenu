@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <nav class="container">
+                <a href='' id='logo'>
+                    <img src="/logothienphu.png" alt="Nike.vn"></img>
+                </a>
+                <ul id="main-menu">
+                    <li><a href="">About</a></li>
+                    <li><a href="">HTML</a>
+                        <ul class="submenu">
+                            <li><a href="">Menu 2.1</a></li>
+                            <li><a href="">Menu 2.2</a>
+                                <ul class="submenu">
+                                    <li><a href="">Menu 2.2.1</a></li>
+                                    <li><a href="">Menu 2.2.2</a></li>
+                                    <li><a href="">Menu 2.2.3</a></li>
+                                    <li><a href="">Menu 2.2.4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Menu 2.3</a></li>
+                            <li><a href="">Menu 2.4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">CSS</a></li>
+                    <li><a href="">PHP</a>
+                        <ul class="submenu">
+                            <li><a href="">Menu 2.1</a></li>
+                            <li><a href="">Menu 2.2</a></li>
+                            <li><a href="">Menu 2.3</a>
+                                <ul class="submenu">
+                                    <li><a href="">Menu 2.2.1</a></li>
+                                    <li><a href="">Menu 2.2.2</a></li>
+                                    <li><a href="">Menu 2.2.3</a></li>
+                                    <li><a href="">Menu 2.2.4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Menu 2.4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Bootstrap</a></li>
+                    <li><a href="">Javascript</a></li>
+                    <li><a href="">Project</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <!-- <div id="wp-content">
+
+        </div>
+        <div id="footer">
+
+        </div> -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            // tìm phần tử li có submenu và thêm vào nó classchild để xác định mũi tên ở chỗ nào
+            $('.submenu').parent('li').addClass('has-child');
+        });
+    </script>
+</body>
+
+</html>
